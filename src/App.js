@@ -4,6 +4,8 @@ import Header from './components/Header/header'
 import About from './components/about/about'
 import NotFoundPage from './routes/NotFoundPage'
 import NavBar from './components/NavBar/NavBar'
+import PublicOnlyRoute from './components/Utils/PublicOnlyRoute'
+import LoginPage from './routes/LoginPage'
 
 
 class App extends React.Component {
@@ -20,6 +22,10 @@ class App extends React.Component {
             exact
             path={'/'}
             component={About}
+            />
+            <PublicOnlyRoute 
+              path={'/login'}
+              component={LoginPage}
             />
             <Route
             component={NotFoundPage}
