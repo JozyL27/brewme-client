@@ -37,7 +37,7 @@ export default class Header extends React.Component {
         <nav>
             <h1>
                 <Link to='/'>
-                Brewme.io
+                BrewMe.io
                 </Link>
             </h1>
             {TokenService.hasAuthToken()
