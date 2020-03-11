@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Header from './header'
+import Header from './components/Header/header'
 import About from './components/about/about'
 import NotFoundPage from './routes/NotFoundPage'
 import NavBar from './components/NavBar/NavBar'
