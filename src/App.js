@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Header from './header'
 import About from './components/about/about'
+import NotFoundPage from './routes/NotFoundPage'
 
 
 class App extends React.Component {
@@ -17,6 +18,9 @@ class App extends React.Component {
             exact
             path={'/'}
             component={About}
+            />
+            <Route
+            component={NotFoundPage}
             />
           </Switch>
         </main>
