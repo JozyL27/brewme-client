@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Header() {
+export default class Header extends React.Component {
+    render() {
     return (
         <>
         <h1>BrewMe.io</h1>
         </>
     )
+    }
 }
