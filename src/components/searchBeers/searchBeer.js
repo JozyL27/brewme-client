@@ -1,5 +1,6 @@
 import React from 'react'
 import SearchBeerService from '../../services/search-beer-service'
+import Beer from './items'
 
 
 export default class SearchBeer extends React.Component {
@@ -8,8 +9,22 @@ export default class SearchBeer extends React.Component {
         page: 0
     }
 
-    getBeers = event => {
-        event.preventDefault()
+    // getBeers = event => {
+    //     event.preventDefault()
+    //     let pageNum = this.state.page
+    //     pageNum += 1
+        
+
+    //     SearchBeerService.getPaginatedBeers(pageNum)
+    //         .then(res => {
+    //             this.setState({ beers: res, page: pageNum })
+    //         })
+    //         .catch(error => {
+    //             console.log(error)
+    //         })
+    // }
+
+    getBeers = () => {
         let pageNum = this.state.page
         pageNum += 1
         
@@ -21,6 +36,10 @@ export default class SearchBeer extends React.Component {
             .catch(error => {
                 console.log(error)
             })
+    }
+
+    componentDidMount() {
+        this.getBeers()
     }
 
     renderNextButton() {
@@ -40,6 +59,7 @@ export default class SearchBeer extends React.Component {
             <input type="text" className="search" name="search" placeholder="Beer Database" />
             <input type="submit" value="Search" />
             </form>
+            <Beer brewskis={this.state.beers}/>
             {this.state.page > 0
             ? this.renderNextButton()
             : null}
