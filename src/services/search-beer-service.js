@@ -24,7 +24,7 @@ const SearchBeerService = {
         return encodeURIComponent(name)
     },
     getByName(name) {
-        return fetch(`${config.API_ENDPOINT}/beers/byname/${name}`, {
+        return fetch(`${config.API_ENDPOINT}/beers/name/${name}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'
