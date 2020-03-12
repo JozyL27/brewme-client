@@ -4,22 +4,35 @@ import SearchBeerService from '../../services/search-beer-service'
 
 export default class SearchBeer extends React.Component {
     state = {
-        beers: []
+        beers: [],
+        page: 0
     }
 
     getBeers = event => {
         event.preventDefault()
+        let pageNum = this.state.page
+        pageNum += 1
+        
 
-        SearchBeerService.getPaginatedBeers(1)
+        SearchBeerService.getPaginatedBeers(pageNum)
             .then(res => {
-                console.log(res)
+                this.setState({ beers: res, page: pageNum })
             })
             .catch(error => {
                 console.log(error)
             })
     }
 
+    renderNextButton() {
+        return (
+            <>
+            <input type="button" value="More Brewskis" onClick={this.getBeers} />
+            </>
+        )
+    }
+
     render() {
+        console.log(this.state)
         return (
             <section className="search">
             <h3>Search Beer Database</h3>
@@ -27,6 +40,9 @@ export default class SearchBeer extends React.Component {
             <input type="text" className="search" name="search" placeholder="Beer Database" />
             <input type="submit" value="Search" />
             </form>
+            {this.state.page > 0
+            ? this.renderNextButton()
+            : null}
             </section>
         )
     }
