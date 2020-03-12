@@ -6,25 +6,12 @@ import Beer from './items'
 export default class SearchBeer extends React.Component {
     state = {
         beers: [],
-        page: 0
+        page: 0,
+        error: null
     }
 
-    // getBeers = event => {
-    //     event.preventDefault()
-    //     let pageNum = this.state.page
-    //     pageNum += 1
-        
-
-    //     SearchBeerService.getPaginatedBeers(pageNum)
-    //         .then(res => {
-    //             this.setState({ beers: res, page: pageNum })
-    //         })
-    //         .catch(error => {
-    //             console.log(error)
-    //         })
-    // }
-
     getBeers = () => {
+        this.setState({ error: null })
         let pageNum = this.state.page
         pageNum += 1
         
@@ -34,7 +21,22 @@ export default class SearchBeer extends React.Component {
                 this.setState({ beers: res, page: pageNum })
             })
             .catch(error => {
-                console.log(error)
+                this.setState({ error: error })
+            })
+    }
+
+    previousPage = () => {
+        this.setState({ error: null })
+        let pageNum = this.state.page
+        pageNum -= 1
+        
+
+        SearchBeerService.getPaginatedBeers(pageNum)
+            .then(res => {
+                this.setState({ beers: res, page: pageNum })
+            })
+            .catch(error => {
+                this.setState({ error: error })
             })
     }
 
@@ -50,6 +52,14 @@ export default class SearchBeer extends React.Component {
         )
     }
 
+    renderPreviousButton() {
+        return (
+            <>
+            <input type="button" value="Previous Brewskis" onClick={this.previousPage} />
+            </>
+        )
+    }
+
     render() {
         console.log(this.state)
         return (
@@ -60,6 +70,9 @@ export default class SearchBeer extends React.Component {
             <input type="submit" value="Search" />
             </form>
             <Beer brewskis={this.state.beers}/>
+            {this.state.page > 1
+            ? this.renderPreviousButton()
+            : null}
             {this.state.page > 0
             ? this.renderNextButton()
             : null}
