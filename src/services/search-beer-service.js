@@ -15,9 +15,16 @@ const SearchBeerService = {
             : res.json()
             )
     },
+    encodeString(string) {
+        let name = `${string}`;
+        name = name.toLowerCase()
+            .split(' ')
+            .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+            .join(' ');
+        return encodeURIComponent(name)
+    },
     getByName(name) {
-        encodeString(name)
-        return fetch(`${config.API_ENDPOINT}/beers/${name}`, {
+        return fetch(`${config.API_ENDPOINT}/beers/byname/${name}`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'
@@ -29,15 +36,6 @@ const SearchBeerService = {
             : res.json()
             )
     },
-}
-
-function encodeString(string) {
-    let name = `${string}`;
-    name = name.toLowerCase()
-        .split(' ')
-        .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-        .join(' ');
-    return encodeURIComponent(name)
 }
 
 
