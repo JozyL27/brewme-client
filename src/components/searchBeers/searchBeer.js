@@ -1,20 +1,19 @@
 import React from 'react'
 import SearchBeerService from '../../services/search-beer-service'
 import Beer from './items'
+import BeerContext from '../../context/beerContext'
 
 
 
 
 export default class SearchBeer extends React.Component {
-    state = {
-        beers: [],
-        page: 0,
-        error: null,
-    }
+    static contextType = BeerContext
+
+    
 
     getByName = event => {
         event.preventDefault()
-        this.setState({ error: null })
+        this.context.clearError()
         let beerName = event.target.search.value
         beerName = beerName.toLowerCase()
             .split(' ')
@@ -23,16 +22,12 @@ export default class SearchBeer extends React.Component {
         encodeURIComponent(beerName)
 
         SearchBeerService.getByName(beerName)
-        .then(res => {
-            this.setState({ beers: res })
-        })
-        .catch(res => {
-            this.setState({ error: res.error })
-        })
+        .then(this.context.setBeers)
+        .catch(this.context.setError)
     }
 
     render() {
-        console.log(this.state.beers)
+        console.log(this.context.error)
         return (
             <section className="search">
             <h3>Search Beer Database</h3>
@@ -41,10 +36,10 @@ export default class SearchBeer extends React.Component {
             <input type="submit" />
             </form>
 
-            <Beer brewskis={this.state.beers}/>
+            <Beer brewskis={this.context.beers}/>
 
-            {this.state.error && 
-            <div>{this.state.error}</div>}
+            {this.context.error && 
+            <div>{this.context.error}</div>}
             </section>
         )
     }
