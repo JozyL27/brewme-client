@@ -1,6 +1,7 @@
 import React from 'react'
 import SearchBeerService from '../../services/search-beer-service'
 import Beer from './items'
+import SearchByName from './searchByName'
 
 
 export default class SearchBeer extends React.Component {
@@ -40,6 +41,21 @@ export default class SearchBeer extends React.Component {
             })
     }
 
+    getByName = event => {
+        event.preventDefault()
+        this.setState({ error: null })
+        let beerName = event.target.search.value
+        console.log(beerName)
+
+        SearchBeerService.getByName(beerName)
+        .then(res => {
+            this.setState({ beers: res })
+        })
+        .catch(error => {
+            this.setState({ error: error })
+        })
+    }
+
     componentDidMount() {
         this.getBeers()
     }
@@ -61,14 +77,10 @@ export default class SearchBeer extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <section className="search">
             <h3>Search Beer Database</h3>
-            <form className="searchDatabase" onSubmit={this.getBeers} >
-            <input type="text" className="search" name="search" placeholder="Beer Database" />
-            <input type="submit" value="Search" />
-            </form>
+            <SearchByName byName={this.getByName}/>
             <Beer brewskis={this.state.beers}/>
             {this.state.page > 1
             ? this.renderPreviousButton()
