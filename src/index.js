@@ -12,5 +12,3 @@ ReactDOM.render(
     </BeerProvider>
 </BrowserRouter>
 , document.getElementById('root'));
-
-// forceRefresh={true}

@@ -1,15 +1,18 @@
 import React from 'react'
+import TokenService from '../services/token-service'
 
 const beerContext = React.createContext({
     beers: [],
     error: null,
     user_id: null,
     username: null,
+    hasAuth: null,
     setError: () => {},
     clearError: () => {},
     setBeers: () => {},
     setUser: () => {},
     clearBeers: () => {},
+    setAuth: () => {},
 
 })
 export default beerContext
@@ -21,6 +24,7 @@ export class BeerProvider extends React.Component {
         error: null,
         user_id: null,
         username: null,
+        hasAuth: TokenService.hasAuthToken(),
     }
 
     setUser = user => {
@@ -43,8 +47,11 @@ export class BeerProvider extends React.Component {
         this.setState({ beers: [] })
     }
 
+    setAuth = () => {
+        this.setState({ hasAuth: TokenService.hasAuthToken })
+    }
+
     render() {
-        console.log(this.state)
         const value = {
             beers: this.state.beers,
             error: this.state.error,
@@ -55,6 +62,8 @@ export class BeerProvider extends React.Component {
             setBeers: this.setBeers,
             setUser: this.setUser,
             clearBeers: this.clearBeers,
+            hasAuth: this.state.hasAuth,
+            setAuth: this.setAuth,
         }
 
         return (

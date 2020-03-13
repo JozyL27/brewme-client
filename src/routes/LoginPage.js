@@ -7,10 +7,10 @@ export default class LoginPage extends React.Component {
     static defaultProps = {
         location: {},
         history: {
-            push: () => {},
+          push: () => {},
         },
     }
-
+    
     handleLoginSuccess = () => {
         const { location, history } = this.props
         const destination = (location.state || {}).from || '/'
@@ -18,6 +18,8 @@ export default class LoginPage extends React.Component {
     }
 
     render() {
+        console.log(this.props.history)
+        console.log(this.props.location)
         return (
             <section className='LoginPage'>
                 <h2>Login</h2>

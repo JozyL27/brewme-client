@@ -2,10 +2,14 @@ import React from 'react'
 import TokenService from '../../services/token-service'
 import { Link } from 'react-router-dom'
 import './header.css'
+import BeerContext from '../../context/beerContext'
 
 export default class Header extends React.Component {
+    static contextType = BeerContext
+
     handleLogoutClick = () => {
         TokenService.clearAuthToken()
+        this.context.setAuth()
     }
 
     renderLogoutLink() {

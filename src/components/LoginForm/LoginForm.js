@@ -2,11 +2,14 @@ import React from 'react'
 import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
 import { Button, Input } from '../Utils/Utils'
+import BeerContext from '../../context/beerContext'
 
 export default class LoginForm extends React.Component {
     static defaultProps = {
         onLoginSuccess: () => {}
     }
+
+    static contextType = BeerContext
 
     state = { error: null }
 
@@ -23,6 +26,7 @@ export default class LoginForm extends React.Component {
             user_name.value = ''
             password.value = ''
             TokenService.saveAuthToken(res.authToken)
+            this.context.setAuth()
             this.props.onLoginSuccess()
         })
         .catch(res => {
