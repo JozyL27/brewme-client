@@ -20,7 +20,13 @@ export default class NavBar extends React.Component {
                     Search
                     </Link>
                 </li>
-                <li className='navLink'>My Beers</li>
+                <li className='navLink'>
+                    <Link
+                    to='/myBeers'
+                    >
+                    My Beers
+                    </Link>
+                </li>
                 <li className='navLink'>
                     <Link
                     to='/random'
