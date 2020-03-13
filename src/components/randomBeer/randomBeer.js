@@ -10,7 +10,6 @@ componentDidMount() {
     if(TokenService.hasAuthToken()) {
     let user = TokenService.getAuthToken()
     let parsedUser = TokenService.parseAuthToken(user)
-    console.log(parsedUser)
     this.context.setUser(parsedUser)
     }
 }

@@ -9,6 +9,7 @@ const beerContext = React.createContext({
     clearError: () => {},
     setBeers: () => {},
     setUser: () => {},
+    clearBeers: () => {},
 
 })
 export default beerContext
@@ -38,6 +39,9 @@ export class BeerProvider extends React.Component {
         this.setState({ error: null })
     }
 
+    clearBeers = () => {
+        this.setState({ beers: [] })
+    }
 
     render() {
         console.log(this.state)
@@ -50,6 +54,7 @@ export class BeerProvider extends React.Component {
             clearError: this.clearError,
             setBeers: this.setBeers,
             setUser: this.setUser,
+            clearBeers: this.clearBeers,
         }
 
         return (

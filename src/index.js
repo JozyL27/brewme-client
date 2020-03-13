@@ -6,10 +6,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { BeerProvider } from './context/beerContext'
 
 ReactDOM.render(
-<BrowserRouter forceRefresh={true}>
+<BrowserRouter>
     <BeerProvider>
         <App />
     </BeerProvider>
 </BrowserRouter>
 , document.getElementById('root'));
 
+// forceRefresh={true}

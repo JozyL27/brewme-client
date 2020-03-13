@@ -14,7 +14,6 @@ export default class SearchBeer extends React.Component {
         if(TokenService.hasAuthToken()) {
         let user = TokenService.getAuthToken()
         let parsedUser = TokenService.parseAuthToken(user)
-        console.log(parsedUser)
         this.context.setUser(parsedUser)
         }
     }
@@ -43,7 +42,8 @@ export default class SearchBeer extends React.Component {
             <input type="submit" />
             </form>
 
-            <Beer brewskis={this.context.beers}/>
+            {this.context.beers.length > 1 &&
+            <Beer brewskis={this.context.beers}/>}
 
             {this.context.error && 
             <div>{this.context.error}</div>}
