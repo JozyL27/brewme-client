@@ -6,6 +6,7 @@ import BeerContext from '../../context/beerContext'
 
 
 
+
 export default class SearchBeer extends React.Component {
     static contextType = BeerContext
 
@@ -25,7 +26,6 @@ export default class SearchBeer extends React.Component {
     }
 
     render() {
-        console.log(this.context.error)
         return (
             <section className="search">
             <h3>Search Beer Database</h3>

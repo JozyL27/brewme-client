@@ -32,6 +32,4 @@ const TokenService = {
   },
 }
 
-console.log(TokenService.parseAuthToken(TokenService.getAuthToken()))
-
 export default TokenService
