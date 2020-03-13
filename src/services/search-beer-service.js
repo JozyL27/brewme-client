@@ -37,7 +37,7 @@ const SearchBeerService = {
             )
     },
     getRandomBeer() {
-        return fetch(`${config.API_ENDPOINT}/random/beer`, {
+        return fetch(`${config.API_ENDPOINT}/beers/random/beer`, {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'

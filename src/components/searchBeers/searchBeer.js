@@ -9,8 +9,6 @@ import BeerContext from '../../context/beerContext'
 export default class SearchBeer extends React.Component {
     static contextType = BeerContext
 
-    
-
     getByName = event => {
         event.preventDefault()
         this.context.clearError()

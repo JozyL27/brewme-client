@@ -7,6 +7,7 @@ import NavBar from './components/NavBar/NavBar'
 import PublicOnlyRoute from './components/Utils/PublicOnlyRoute'
 import LoginPage from './routes/LoginPage'
 import SearchBeer from './components/searchBeers/searchBeer'
+import RandomBeer from './components/randomBeer/randomBeer'
 
 
 class App extends React.Component {
@@ -28,6 +29,11 @@ class App extends React.Component {
             exact
             path={'/search'}
             component={SearchBeer}
+            />
+            <Route
+            exact
+            path={'/random'}
+            component={RandomBeer}
             />
             <PublicOnlyRoute 
               path={'/login'}

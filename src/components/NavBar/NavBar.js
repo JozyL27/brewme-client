@@ -21,7 +21,13 @@ export default class NavBar extends React.Component {
                     </Link>
                 </li>
                 <li className='navLink'>My Beers</li>
-                <li className='navLink'> Random Beer</li>
+                <li className='navLink'>
+                    <Link
+                    to='/random'
+                    >
+                    Random Beer
+                    </Link>
+                </li>
             </ul>
         )
     }
