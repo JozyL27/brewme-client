@@ -26,10 +26,12 @@ const TokenService = {
     const payload = JSON.parse(jsonPayload);
 
     return {
-      id: payload.user_id
+      id: payload.user_id,
+      username: payload.sub
     }
   },
 }
 
+console.log(TokenService.parseAuthToken(TokenService.getAuthToken()))
 
 export default TokenService
