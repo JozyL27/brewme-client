@@ -2,13 +2,22 @@ import React from 'react'
 import SearchBeerService from '../../services/search-beer-service'
 import Beer from './items'
 import BeerContext from '../../context/beerContext'
-
+import TokenService from '../../services/token-service'
 
 
 
 
 export default class SearchBeer extends React.Component {
     static contextType = BeerContext
+
+    componentDidMount() {
+        if(TokenService.hasAuthToken()) {
+        let user = TokenService.getAuthToken()
+        let parsedUser = TokenService.parseAuthToken(user)
+        console.log(parsedUser)
+        this.context.setUser(parsedUser)
+        }
+    }
 
     getByName = event => {
         event.preventDefault()

@@ -1,9 +1,19 @@
 import React from 'react'
 import SearchBeerService from '../../services/search-beer-service'
 import BeerContext from '../../context/beerContext'
+import TokenService from '../../services/token-service'
 
 export default class RandomBeer extends React.Component {
 static contextType = BeerContext
+
+componentDidMount() {
+    if(TokenService.hasAuthToken()) {
+    let user = TokenService.getAuthToken()
+    let parsedUser = TokenService.parseAuthToken(user)
+    console.log(parsedUser)
+    this.context.setUser(parsedUser)
+    }
+}
 
 getRandom = event => {
     event.preventDefault()

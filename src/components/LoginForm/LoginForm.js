@@ -3,7 +3,6 @@ import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
 import { Button, Input } from '../Utils/Utils'
 
-
 export default class LoginForm extends React.Component {
     static defaultProps = {
         onLoginSuccess: () => {}
