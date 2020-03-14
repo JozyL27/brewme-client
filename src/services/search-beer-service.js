@@ -49,6 +49,19 @@ const SearchBeerService = {
             : res.json()
             )
     },
+    getMyBeers(user) {
+        return fetch(`${config.API_ENDPOINT}/userBeers/${user}`, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+        .then(res => 
+            (!res.ok)
+            ? res.json().then(error => Promise.reject(error))
+            : res.json()
+            )
+    },
 }
 
 

@@ -5,6 +5,7 @@ import About from './components/about/about'
 import NotFoundPage from './routes/NotFoundPage'
 import NavBar from './components/NavBar/NavBar'
 import PublicOnlyRoute from './components/Utils/PublicOnlyRoute'
+import PrivateRoute from './components/Utils/PrivateRoute'
 import LoginPage from './routes/LoginPage'
 import SearchBeer from './components/searchBeers/searchBeer'
 import RandomBeer from './components/randomBeer/randomBeer'
@@ -31,8 +32,7 @@ class App extends React.Component {
             path={'/search'}
             component={SearchBeer}
             />
-            <Route
-            exact
+            <PrivateRoute
             path={'/myBeers'}
             component={MyBeers}
             />
