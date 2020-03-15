@@ -33,6 +33,14 @@ export default class SearchBeer extends React.Component {
         .catch(this.context.setError)
     }
 
+    addToMyBeers = (user, beer) => {
+        this.context.clearError()
+    
+        SearchBeerService.addBeer(user, beer)
+        .then(res => console.log(res))
+        .catch(this.context.setError)
+    }
+
     componentWillUnmount() {
         this.context.clearBeers()
     }
@@ -47,7 +55,8 @@ export default class SearchBeer extends React.Component {
             </form>
 
             {this.context.beers.length > 1 &&
-            <Beer brewskis={this.context.beers}/>}
+            <Beer brewskis={this.context.beers} addBeer={this.addToMyBeers}
+            userId={this.context.user_id} hasAuth={this.context.hasAuth}/>}
 
             {this.context.error && 
             <div>{this.context.error}</div>}

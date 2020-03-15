@@ -8,10 +8,11 @@ export default function Beer(props) {
         {props.brewskis.map(beer => <li key={beer.id}> {beer.name}
             <div>ABV: {beer.abv}</div>
             {SearchBeerService.checkForDescript(beer.descript)}
+            {props.hasAuth ?
+            <button onClick={() => props.addBeer(props.userId, beer.id)}>Add to My Beers</button>
+            : null}
         </li>)}
         </>
     )
 }
-
-//if user_id is !null show button
 
