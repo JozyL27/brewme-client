@@ -23,15 +23,18 @@ getRandom = event => {
     .catch(this.context.setError)
 }
 
-addToMyBeers = event => {
-    event.preventDefault()
+addToMyBeers = (user, beer) => {
     this.context.clearError()
-    let randBeer = this.context.beers.rows
 
-    SearchBeerService.addBeer(this.context.user_id, randBeer[0].id)
+    SearchBeerService.addBeer(user, beer)
     .then(res => console.log(res))
     .catch(this.context.setError)
 }
+
+componentWillUnmount() {
+    this.context.clearBeers()
+}
+
 
 render() {
     let randBeer = this.context.beers.rows
@@ -42,8 +45,8 @@ render() {
             <div key={randBeer[0].id}>{randBeer[0].name}
             {SearchBeerService.checkForDescript(randBeer[0].descript)}
             <div>ABV: {randBeer[0].abv}</div>
-            {!!this.context.user_id &&
-            <button onClick={this.addToMyBeers}>Add to My Beers</button>}
+            {this.context.hasAuth === true &&
+            <button onClick={() => this.addToMyBeers(this.context.user_id, randBeer[0].id)}>Add to My Beers</button>}
             </div>}
         </section>
     )

@@ -33,8 +33,11 @@ export default class SearchBeer extends React.Component {
         .catch(this.context.setError)
     }
 
+    componentWillUnmount() {
+        this.context.clearBeers()
+    }
+
     render() {
-        console.log(this.context)
         return (
             <section className="search">
             <h3>Search Beer Database</h3>
