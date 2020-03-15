@@ -1,4 +1,5 @@
 import config from '../config'
+import React from 'react'
 
 
 const SearchBeerService = {
@@ -61,6 +62,30 @@ const SearchBeerService = {
             ? res.json().then(error => Promise.reject(error))
             : res.json()
             )
+    },
+    addBeer(user, beer) {
+        return fetch(`${config.API_ENDPOINT}/userBeers`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                user_id: user,
+                beer_id: beer,
+            }),
+        })
+        .then(res =>
+            (!res.ok)
+            ? res.json().then(e => Promise.reject(e))
+            : res.json()
+          )
+    },
+    checkForDescript(descript) {
+        if(descript.length <= 1) {
+            return  <p className='noDescript'>No description available.</p>
+        } 
+    
+        return <p>{descript}</p>
     },
 }
 

@@ -23,15 +23,27 @@ getRandom = event => {
     .catch(this.context.setError)
 }
 
+addToMyBeers = event => {
+    event.preventDefault()
+    this.context.clearError()
+    let randBeer = this.context.beers.rows
+
+    SearchBeerService.addBeer(this.context.user_id, randBeer[0].id)
+    .then(res => console.log(res))
+    .catch(this.context.setError)
+}
+
 render() {
     let randBeer = this.context.beers.rows
     return (
         <section className="random">
             <button onClick={this.getRandom}>Get Random Beer!</button>
             {this.context.beers.rows && 
-            <div>{randBeer[0].name}
-            <p>{randBeer[0].descript}</p>
+            <div key={randBeer[0].id}>{randBeer[0].name}
+            {SearchBeerService.checkForDescript(randBeer[0].descript)}
             <div>ABV: {randBeer[0].abv}</div>
+            {!!this.context.user_id &&
+            <button onClick={this.addToMyBeers}>Add to My Beers</button>}
             </div>}
         </section>
     )
