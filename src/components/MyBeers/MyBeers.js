@@ -24,6 +24,7 @@ export default class MyBeers extends React.Component {
     }
 
     render() {
+        console.log(this.context)
         return (
             <>
             {this.context.beers.length === 0 &&
