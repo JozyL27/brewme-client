@@ -53,7 +53,7 @@ export default class SearchBeer extends React.Component {
             <input type="submit" />
             </form>
 
-            {this.context.beers.length > 1 &&
+            {this.context.beers.length >= 1 &&
             <Beer brewskis={this.context.beers} addBeer={this.addToMyBeers}
             userId={this.context.user_id} hasAuth={this.context.hasAuth}/>}
 
