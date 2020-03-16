@@ -87,6 +87,18 @@ const SearchBeerService = {
     
         return <p>{descript}</p>
     },
+    deleteBeer(user, beer) {
+        return fetch(`${config.API_ENDPOINT}/userbeers`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                user_id: user,
+                beer_id: beer
+            })
+        })
+    },
 }
 
 
