@@ -3,6 +3,7 @@ import SearchBeerService from '../../services/search-beer-service'
 import Beer from './items'
 import BeerContext from '../../context/beerContext'
 import TokenService from '../../services/token-service'
+import './searchBeer.css'
 
 
 
@@ -11,6 +12,8 @@ export default class SearchBeer extends React.Component {
     static contextType = BeerContext
 
     componentDidMount() {
+        this.context.clearError()
+
         if(TokenService.hasAuthToken()) {
         let user = TokenService.getAuthToken()
         let parsedUser = TokenService.parseAuthToken(user)
@@ -42,12 +45,15 @@ export default class SearchBeer extends React.Component {
 
     componentWillUnmount() {
         this.context.clearBeers()
+        this.context.clearError()
     }
 
     render() {
         return (
             <section className="search">
             <h3>Search Beer Database</h3>
+            {this.context.error && 
+            <div>{this.context.error.error}</div>}
             <form className="searchDatabase" onSubmit={this.getByName} >
             <input type="text" className="search" name="search" placeholder="Beer Database" />
             <input type="submit" />
@@ -55,10 +61,9 @@ export default class SearchBeer extends React.Component {
 
             {this.context.beers.length >= 1 &&
             <Beer brewskis={this.context.beers} addBeer={this.addToMyBeers}
-            userId={this.context.user_id} hasAuth={this.context.hasAuth}/>}
+            userId={this.context.user_id} hasAuth={this.context.hasAuth}
+            beerError={this.context.error} />}
 
-            {this.context.error && 
-            <div>{this.context.error}</div>}
             </section>
         )
     }

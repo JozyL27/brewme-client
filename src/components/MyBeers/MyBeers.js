@@ -8,6 +8,8 @@ export default class MyBeers extends React.Component {
     static contextType = BeerContext
 
     componentDidMount() {
+        this.context.clearError()
+
         if(TokenService.hasAuthToken()) {
         let user = TokenService.getAuthToken()
         let parsedUser = TokenService.parseAuthToken(user)
@@ -35,20 +37,21 @@ export default class MyBeers extends React.Component {
 
     componentWillUnmount() {
         this.context.clearBeers()
+        this.context.clearError()
     }
 
     render() {
         return (
             <>
+            {this.context.error && 
+            <div>{this.context.error.error}</div>}
+
             {this.context.beers.length < 1 &&
             <p>There are currently no beers in your list!</p>}
 
             {this.context.beers.length >= 1 &&
             <MyItems brewskis={this.context.beers} 
             deleteBrewski={this.deleteUserBeer}/>}
-
-            {this.context.error && 
-            <div>{this.context.error}</div>}
             </>
         )
     }

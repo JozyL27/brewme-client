@@ -7,6 +7,8 @@ export default class RandomBeer extends React.Component {
 static contextType = BeerContext
 
 componentDidMount() {
+    this.context.clearError()
+
     if(TokenService.hasAuthToken()) {
     let user = TokenService.getAuthToken()
     let parsedUser = TokenService.parseAuthToken(user)
@@ -33,6 +35,7 @@ addToMyBeers = (user, beer) => {
 
 componentWillUnmount() {
     this.context.clearBeers()
+    this.context.clearError()
 }
 
 
@@ -41,6 +44,8 @@ render() {
     return (
         <section className="random">
             <button onClick={this.getRandom}>Get Random Beer!</button>
+            {this.context.error && 
+            <div>{this.context.error.error}</div>}
             {this.context.beers.rows && 
             <div key={randBeer[0].id}>{randBeer[0].name}
             {SearchBeerService.checkForDescript(randBeer[0].descript)}
