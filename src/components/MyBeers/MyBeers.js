@@ -40,10 +40,10 @@ export default class MyBeers extends React.Component {
     render() {
         return (
             <>
-            {this.context.beers.length === 0 &&
+            {this.context.beers.length < 1 &&
             <p>There are currently no beers in your list!</p>}
 
-            {this.context.beers.length > 1 &&
+            {this.context.beers.length >= 1 &&
             <MyItems brewskis={this.context.beers} 
             deleteBrewski={this.deleteUserBeer}/>}
 

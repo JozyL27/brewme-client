@@ -1,7 +1,6 @@
 import config from '../config'
 import React from 'react'
 
-
 const SearchBeerService = {
     getPaginatedBeers(pageNum) {
         return fetch(`${config.API_ENDPOINT}/beers/${pageNum}`, {

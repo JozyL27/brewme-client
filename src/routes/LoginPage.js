@@ -18,8 +18,6 @@ export default class LoginPage extends React.Component {
     }
 
     render() {
-        console.log(this.props.history)
-        console.log(this.props.location)
         return (
             <section className='LoginPage'>
                 <h2>Login</h2>

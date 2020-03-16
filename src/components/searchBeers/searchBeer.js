@@ -37,7 +37,6 @@ export default class SearchBeer extends React.Component {
         this.context.clearError()
     
         SearchBeerService.addBeer(user, beer)
-        .then(res => console.log(res))
         .catch(this.context.setError)
     }
 
@@ -46,7 +45,6 @@ export default class SearchBeer extends React.Component {
     }
 
     render() {
-        console.log(this.context.beers)
         return (
             <section className="search">
             <h3>Search Beer Database</h3>
