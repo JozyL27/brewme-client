@@ -50,8 +50,7 @@ render() {
             <div key={randBeer[0].id}>{randBeer[0].name}
             {SearchBeerService.checkForDescript(randBeer[0].descript)}
             <div>ABV: {randBeer[0].abv}</div>
-            {this.context.hasAuth === true &&
-            <button onClick={() => this.addToMyBeers(this.context.user_id, randBeer[0].id)}>Add to My Beers</button>}
+            <button onClick={() => this.addToMyBeers(this.context.user_id, randBeer[0].id)}>Add to My Beers</button>
             </div>}
         </section>
     )
