@@ -27,8 +27,7 @@ class App extends React.Component {
             path={'/'}
             component={About}
             />
-            <Route
-            exact
+            <PrivateRoute
             path={'/search'}
             component={SearchBeer}
             />
@@ -36,8 +35,7 @@ class App extends React.Component {
             path={'/myBeers'}
             component={MyBeers}
             />
-            <Route
-            exact
+            <PrivateRoute
             path={'/random'}
             component={RandomBeer}
             />
