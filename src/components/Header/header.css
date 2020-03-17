@@ -3,3 +3,42 @@ h1 {
     text-align: center;
     text-decoration: none;
 }
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.loggedIn, .renderLogin {
+    text-align: center;
+    padding-top: 25px;
+  }
+
+/* 
+.loggedIn, .renderLogin {
+    align-self: flex-end;
+    margin-right: 140px;
+  } */
+
+
+/* .loggedIn, .renderLogin {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+  } */
+
+  /* .renderLogin {
+    background: rgb(255, 121, 121);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin-left: 10px;
+  } */
+  
+  /* .loggedIn {
+    padding: 5px 15px;
+    border-radius: 15px;
+  } */

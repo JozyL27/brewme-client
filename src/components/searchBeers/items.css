@@ -1,0 +1,19 @@
+.searchUl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchLi {
+    width: 40%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.searchAbv {
+    margin: 10px auto 5px auto;
+}

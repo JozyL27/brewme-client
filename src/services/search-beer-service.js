@@ -84,7 +84,7 @@ const SearchBeerService = {
             return  <p className='noDescript'>No description available.</p>
         } 
     
-        return <p>{descript}</p>
+        return <p className="searchDescript">{descript}</p>
     },
     deleteBeer(user, beer) {
         return fetch(`${config.API_ENDPOINT}/userbeers`, {
