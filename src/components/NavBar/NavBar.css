@@ -16,3 +16,9 @@ ul {
     color: #E1C340;
     font-weight: bold;
 }
+
+@media screen and (min-width: 1024px) {
+    .navLink {
+        margin-right: 45px;
+    }
+}

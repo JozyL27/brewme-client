@@ -30,8 +30,10 @@ nav {
     padding: 5px;
 }
 
-/* 
-.loggedIn, .renderLogin {
-    align-self: flex-end;
-    margin-right: 140px;
-  } */
+
+/* laptops */
+@media screen and (min-width: 1024px) {
+    .brewHeader {
+        font-size: 40px;
+    }
+}
