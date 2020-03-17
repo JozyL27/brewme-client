@@ -34,6 +34,6 @@ nav {
 /* laptops */
 @media screen and (min-width: 1024px) {
     .brewHeader {
-        font-size: 40px;
+        font-size: 50px;
     }
 }
