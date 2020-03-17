@@ -1,4 +1,4 @@
-.search{
+.searchSection{
     display: flex;
     flex-direction: column;
 }
@@ -9,5 +9,45 @@
 
 .searchDatabase {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
 }
+
+.search {
+    width: 80%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('./images/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    background-size: 20px;
+    margin: 10px auto 20px auto;
+  }
+
+  .searchButton {
+    position: relative;
+    left: 10px;
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 auto;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgb(135,206,250); 
+    border: 2px solid white;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+
+  .searchButton:hover {
+    background-color: #E1C340;
+    color: white;
+  }

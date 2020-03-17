@@ -5,11 +5,29 @@
     align-items: center;
 }
 
+
 .randButton {
+    position: relative;
+    left: 10px;
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
     margin: 40px auto 25px auto;
-    width: 20%;
-    height: auto;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: rgb(135,206,250); 
+    border: 2px solid white;
+    border-radius: 8px;
+    font-weight: bold;
 }
+
+.randButton:hover {
+    background-color: #E1C340;
+    color: white;
+  }
 
 .randDiv {
     width: 70%;

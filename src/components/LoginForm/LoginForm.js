@@ -3,6 +3,7 @@ import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
 import { Button, Input } from '../Utils/Utils'
 import BeerContext from '../../context/beerContext'
+import './loginForm.css'
 
 export default class LoginForm extends React.Component {
     static defaultProps = {
@@ -48,6 +49,7 @@ export default class LoginForm extends React.Component {
                     <Input
                     required
                     name='user_name'
+                    className="loginInput"
                     id='user_name'
                     >
                     </Input>
@@ -60,10 +62,11 @@ export default class LoginForm extends React.Component {
                     required
                     name='password'
                     type='password'
+                    className="loginInput"
                     id='password'>
                     </Input>
                 </div>
-                <Button type='submit'>
+                <Button type='submit' className="loginButton">
                     Login
                 </Button>
             </form>

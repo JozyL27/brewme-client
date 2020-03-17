@@ -11,3 +11,8 @@ ul {
     text-decoration: none;
     text-align: center;
 }
+
+.navBarLink {
+    color: #E1C340;
+    font-weight: bold;
+}

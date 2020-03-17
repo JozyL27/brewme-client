@@ -10,12 +10,24 @@ nav {
     justify-content: center;
 }
 
-
-
-
 .loggedIn, .renderLogin {
     text-align: center;
     padding-top: 25px;
+}
+
+.brewHeader {
+    color: rgb(135,206,250);
+}
+
+.inLink {
+    font-weight: bold;
+    color: #FF4A3B;
+}
+
+.outLink {
+    font-weight: bold;
+    color: #68819B;
+    padding: 5px;
 }
 
 /* 

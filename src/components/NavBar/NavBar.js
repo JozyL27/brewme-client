@@ -9,13 +9,15 @@ export default class NavBar extends React.Component {
             <ul className='navBar'>
                 <li className='navLink'>
                     <Link
-                    to='/'>
+                    to='/'
+                    className="navBarLink">
                     Home
                     </Link>
                 </li>
                 <li className='navLink'>
                     <Link
                     to='/search'
+                    className="navBarLink"
                     >
                     Search
                     </Link>
@@ -23,6 +25,7 @@ export default class NavBar extends React.Component {
                 <li className='navLink'>
                     <Link
                     to='/myBeers'
+                    className="navBarLink"
                     >
                     My Beers
                     </Link>
@@ -30,6 +33,7 @@ export default class NavBar extends React.Component {
                 <li className='navLink'>
                     <Link
                     to='/random'
+                    className="navBarLink"
                     >
                     Random Beer
                     </Link>

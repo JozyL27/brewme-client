@@ -17,6 +17,7 @@ export default class Header extends React.Component {
             <div className='loggedIn'>
                 <Link
                 onClick={this.handleLogoutClick}
+                className="inLink"
                 to='/'>
                 Logout
                 </Link>
@@ -28,6 +29,7 @@ export default class Header extends React.Component {
         return (
             <div className='renderLogin'>
                 <Link
+                className="outLink"
                 to='/login'>
                 Login
                 </Link>
@@ -40,7 +42,7 @@ export default class Header extends React.Component {
         <>
         <nav>
             <h1>
-                <Link to='/'>
+                <Link to='/' className="brewHeader">
                 BrewMe
                 </Link>
             </h1>

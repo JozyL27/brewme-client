@@ -12,9 +12,33 @@
     margin-right: 35px;
     margin-bottom: 15px;
     padding: 15px;
-    border: 1px solid black;
+    /* gradient below */
+    border-top: 5px solid rgb(135,206,250);
+    border-bottom: 5px solid #E1C340;
+    background-image: 
+        linear-gradient(rgb(135,206,250), #E1C340),
+        linear-gradient(rgb(135,206,250), #E1C340)
+    ;
+    background-size:5px 100%;
+    background-position:0 0, 100% 0;
+    background-repeat:no-repeat;
 }
+
+
 
 .myAbv {
     margin: 10px auto 5px auto;
 }
+
+
+
+
+    /* border-top: 5px solid #8360c3;
+    border-bottom: 5px solid #2ebf91;
+    background-image: 
+        linear-gradient(#8360c3, #2ebf91),
+        linear-gradient(#8360c3, #2ebf91)
+    ;
+    background-size:5px 100%;
+    background-position:0 0, 100% 0;
+    background-repeat:no-repeat; */
