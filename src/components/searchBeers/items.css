@@ -5,7 +5,7 @@
     justify-content: center;
 }
 
-.searchLi {
+/* .searchLi {
     width: 70%;
     text-align: center;
     margin-top: 15px;
@@ -13,6 +13,25 @@
     margin-bottom: 15px;
     padding: 15px;
     border: 1px solid black;
+} */
+
+.searchLi {
+    width: 70%;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 35px;
+    margin-bottom: 15px;
+    padding: 15px;
+    /* gradient below */
+    border-top: 5px solid rgb(135,206,250);
+    border-bottom: 5px solid #E1C340;
+    background-image: 
+        linear-gradient(rgb(135,206,250), #E1C340),
+        linear-gradient(rgb(135,206,250), #E1C340)
+    ;
+    background-size:5px 100%;
+    background-position:0 0, 100% 0;
+    background-repeat:no-repeat;
 }
 
 .searchAbv {
