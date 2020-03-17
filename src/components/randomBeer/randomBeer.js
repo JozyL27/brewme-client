@@ -2,6 +2,7 @@ import React from 'react'
 import SearchBeerService from '../../services/search-beer-service'
 import BeerContext from '../../context/beerContext'
 import TokenService from '../../services/token-service'
+import './randomBeer.css'
 
 export default class RandomBeer extends React.Component {
 static contextType = BeerContext
@@ -43,14 +44,17 @@ render() {
     let randBeer = this.context.beers.rows
     return (
         <section className="random">
-            <button onClick={this.getRandom}>Get Random Beer!</button>
+            <button onClick={this.getRandom} className="randButton">Get Random Beer!</button>
             {this.context.error && 
             <div>{this.context.error.error}</div>}
             {this.context.beers.rows && 
-            <div key={randBeer[0].id}>{randBeer[0].name}
+            <div key={randBeer[0].id} className="randDiv">{randBeer[0].name}
             {SearchBeerService.checkForDescript(randBeer[0].descript)}
-            <div>ABV: {randBeer[0].abv}</div>
-            <button onClick={() => this.addToMyBeers(this.context.user_id, randBeer[0].id)}>Add to My Beers</button>
+            <div className="randAbv">ABV: {randBeer[0].abv}</div>
+            <button 
+            onClick={() => 
+            this.addToMyBeers(this.context.user_id, randBeer[0].id)}>
+            Add to My Beers</button>
             </div>}
         </section>
     )
