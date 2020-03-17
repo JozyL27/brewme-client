@@ -49,9 +49,11 @@ export default class MyBeers extends React.Component {
             {this.context.beers.length < 1 &&
             <p>There are currently no beers in your list!</p>}
 
+            <ul className="myUl">
             {this.context.beers.length >= 1 &&
             <MyItems brewskis={this.context.beers} 
             deleteBrewski={this.deleteUserBeer}/>}
+            </ul>
             </>
         )
     }
