@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header component renders UI as expected 1`] = `
+<nav>
+  <h1>
+    <a
+      className="brewHeader"
+      href="/"
+      onClick={[Function]}
+    >
+      BrewMe
+    </a>
+  </h1>
+  <div
+    className="renderLogin"
+  >
+    <a
+      className="outLink"
+      href="/login"
+      onClick={[Function]}
+    >
+      Login
+    </a>
+  </div>
+</nav>
+`;
