@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyItems component renders the  UI as expected 1`] = `
+Array [
+  <li
+    className="myLi"
+  >
+     
+    beer one
+    <div
+      className="myAbv"
+    >
+      ABV: 
+      4
+    </div>
+    <p
+      className="searchDescript"
+    >
+      im a beer
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </li>,
+  <li
+    className="myLi"
+  >
+     
+    beer two
+    <div
+      className="myAbv"
+    >
+      ABV: 
+      5
+    </div>
+    <p
+      className="searchDescript"
+    >
+      im a beer too
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </li>,
+]
+`;
