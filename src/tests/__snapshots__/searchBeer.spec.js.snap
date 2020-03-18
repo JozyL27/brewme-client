@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`search beer component renders the UI as expected 1`] = `
+<section
+  className="searchSection"
+>
+  <h3
+    className="searchHeader"
+  >
+    Search Beer Database
+  </h3>
+  <form
+    className="searchDatabase"
+    onSubmit={[Function]}
+  >
+    <input
+      className="search"
+      name="search"
+      placeholder="Beer Database"
+      type="text"
+    />
+    <input
+      className="searchButton"
+      type="submit"
+    />
+  </form>
+  <ul
+    className="searchUl"
+  />
+</section>
+`;
