@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyBeers component renders the UI as expected 1`] = `
+Array [
+  <p>
+    There are currently no beers in your list!
+  </p>,
+  <ul
+    className="myUl"
+  />,
+]
+`;

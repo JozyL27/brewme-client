@@ -1,20 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
-import MyBeers from '../components/MyBeers/MyBeers'
+import LoginForm from '../components/LoginForm/LoginForm'
 
 
-describe(`MyBeers component`, () => {
+describe(`LoginForm component`, () => {
 
-    it(`MyBeers component renders without crashing`, () => {
+    it(`renders without crashing`, () => {
         const div = document.createElement('div')
-        ReactDOM.render(<MyBeers />, div)
+        ReactDOM.render(<LoginForm />, div)
         ReactDOM.unmountComponentAtNode(div)
     })
 
     it(`renders the UI as expected`, () => {
         const tree = renderer
-            .create(<MyBeers />)
+            .create(<LoginForm />)
             .toJSON()
             expect(tree).toMatchSnapshot()
     })
