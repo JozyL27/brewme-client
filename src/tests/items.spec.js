@@ -12,4 +12,11 @@ describe(`items component`, () => {
         ReactDOM.render(<Beer userId={5} brewskis={testInput} />, div)
         ReactDOM.unmountComponentAtNode(div)
     })
+
+    it(`renders the UI as expected`, () => {
+        const tree = renderer
+            .create(<Beer userId={5} brewskis={testInput} />)
+            .toJSON()
+            expect(tree).toMatchSnapshot()
+    })
 })
