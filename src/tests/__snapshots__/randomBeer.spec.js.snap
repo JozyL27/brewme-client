@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`random beer component renders the UI as expected 1`] = `
+<section
+  className="random"
+>
+  <button
+    className="randButton"
+    onClick={[Function]}
+  >
+    Get Random Beer!
+  </button>
+</section>
+`;
