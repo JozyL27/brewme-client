@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar component should render the UI as expected 1`] = `
+<ul
+  className="navBar"
+>
+  <li
+    className="navLink"
+  >
+    <a
+      className="navBarLink"
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+  </li>
+  <li
+    className="navLink"
+  >
+    <a
+      className="navBarLink"
+      href="/search"
+      onClick={[Function]}
+    >
+      Search
+    </a>
+  </li>
+  <li
+    className="navLink"
+  >
+    <a
+      className="navBarLink"
+      href="/myBeers"
+      onClick={[Function]}
+    >
+      My Beers
+    </a>
+  </li>
+  <li
+    className="navLink"
+  >
+    <a
+      className="navBarLink"
+      href="/random"
+      onClick={[Function]}
+    >
+      Random Beer
+    </a>
+  </li>
+</ul>
+`;
