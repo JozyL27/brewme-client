@@ -39,7 +39,7 @@ export default class LoginForm extends React.Component {
         const { error } = this.state
         return (
             <form className='LoginForm' onSubmit={this.handleSubmitJwtAuth}>
-                <h2 className="loginHeader">Login</h2>
+                <h2 className="loginHeader">LOGIN</h2>
                 <div role='alert'>
                     {error && <p className='red'>{error}</p>}
                 </div>
@@ -57,7 +57,7 @@ export default class LoginForm extends React.Component {
                 </div>
                 <div className='password'>
                     <label htmlFor='password'>
-                        password
+                        Password
                     </label>
                     <Input
                     required
