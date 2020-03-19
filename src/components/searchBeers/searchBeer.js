@@ -52,12 +52,13 @@ export default class SearchBeer extends React.Component {
         return (
             <section className="searchSection">
             <h3 className="searchHeader">Search Beer Database</h3>
-            {this.context.error && 
-            <div>{this.context.error.error}</div>}
             <form className="searchDatabase" onSubmit={this.getByName} >
             <input type="text" className="search" name="search" placeholder="Beer Database" />
             <input type="submit" className="searchButton" />
             </form>
+
+            {this.context.error && 
+            <div className="error">{this.context.error.error}</div>}
             
             <ul className="searchUl">
             {this.context.beers.length >= 1 &&

@@ -31,7 +31,7 @@ label {
 .loginButton {
     cursor: pointer;
     position: relative;
-    left: 7px;
+    left: 2px;
     color: white;
     padding: 8px 20px;
     text-decoration: none;
@@ -54,5 +54,16 @@ label {
 
 .loginHeader {
     color: rgb(135,206,250);
+}
+
+
+
+
+
+/* small laptops */
+@media screen and (min-width: 1024px) {
+    .LoginForm {
+        width: 30%;
+    }
 }
 

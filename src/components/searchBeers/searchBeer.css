@@ -51,3 +51,10 @@
     background-color: #E1C340;
     color: white;
   }
+
+  .error {
+    text-align: center;
+    margin: 30px auto 30px auto;
+    font-weight: bold;
+    color: red;
+  }

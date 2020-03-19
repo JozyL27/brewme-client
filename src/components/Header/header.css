@@ -46,14 +46,14 @@ nav {
 }
 
 .inLink:hover {
-    color: white;
-    background-color: #E1C340;
+    color: black;
+    background-color: yellow;
 }
 
 .outLink {
     font-weight: bold;
     background-color: rgb(135,206,250);
-    color: white;
+    color: black;
     padding: 5px;
     transition-duration: 0.4s;
     border: 1px solid black;
@@ -63,8 +63,8 @@ nav {
 }
 
 .outLink:hover {
-    color: white;
-    background-color: #E1C340
+    color: black;
+    background-color: #77dd77;
 }
 
 
