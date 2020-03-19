@@ -19,6 +19,7 @@ Array [
       im a beer
     </p>
     <button
+      className="deleteButton"
       onClick={[Function]}
     >
       Delete
@@ -41,6 +42,7 @@ Array [
       im a beer too
     </p>
     <button
+      className="deleteButton"
       onClick={[Function]}
     >
       Delete

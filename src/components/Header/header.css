@@ -1,18 +1,33 @@
 h1 {
     margin-top: 70px;
+    font-size: 45px;
     text-align: center;
     text-decoration: none;
+    transition-duration: 0.4s;
+    /* image */
+    /* background-image: url("./images/kissclipart-transparent-background-beer-mug-clipart-beer-glass-f4f301b30dcce288.png");
+    background-repeat: no-repeat;
+    background-position: 5% 0%;
+    background-size: 35px;
+    width: 70%; */
+}
+
+h1:hover {
+    color: rgb(135,206,250);
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(135,206,250), 0 0 5px rgb(135,206,250);
 }
 
 nav {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
 }
 
 .loggedIn, .renderLogin {
-    text-align: center;
     padding-top: 25px;
+    align-self: flex-end;
+    margin: 0px 25px 0px 0px;
 }
 
 .brewHeader {
@@ -21,19 +36,58 @@ nav {
 
 .inLink {
     font-weight: bold;
-    color: #FF4A3B;
+    color: white;
+    background-color: red;
+    transition-duration: 0.4s;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.inLink:hover {
+    color: white;
+    background-color: #E1C340;
 }
 
 .outLink {
     font-weight: bold;
-    color: #68819B;
+    background-color: rgb(135,206,250);
+    color: white;
     padding: 5px;
+    transition-duration: 0.4s;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
 }
 
+.outLink:hover {
+    color: white;
+    background-color: #E1C340
+}
+
+
+/* tablets */
+@media screen and (min-width: 768px) {
+    .brewHeader {
+        font-size: 60px;
+    }
+
+    .loggedIn, .renderLogin {
+        margin: 0px 30px 0px 0px;
+        font-size: 14px;
+    }
+}
 
 /* laptops */
 @media screen and (min-width: 1024px) {
     .brewHeader {
         font-size: 80px;
+    }
+
+    .loggedIn, .renderLogin {
+        margin: 0px 60px 0px 0px;
+        font-size: 14px;
     }
 }

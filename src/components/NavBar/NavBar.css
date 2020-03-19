@@ -2,7 +2,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 45px;
+    margin-top: 20px;
 }
 
 .navLink {
@@ -15,8 +15,23 @@ ul {
 .navBarLink {
     color: #E1C340;
     font-weight: bold;
+    transition-duration: 0.4s;
 }
 
+.navBarLink:hover {
+    color: rgb(135,206,250);
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px rgb(135,206,250);
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .navLink {
+        font-size: 25px;
+    }
+}
+
+/* laptops */
 @media screen and (min-width: 1024px) {
     .navLink {
         margin-right: 45px;

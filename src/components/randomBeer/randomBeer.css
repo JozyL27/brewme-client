@@ -34,8 +34,7 @@
     width: 70%;
     text-align: center;
     margin-top: 15px;
-    margin-right: 35px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     padding: 15px;
     /* gradient below */
     border-top: 5px solid rgb(135,206,250);
@@ -47,10 +46,11 @@
     background-size:5px 100%;
     background-position:0 0, 100% 0;
     background-repeat:no-repeat;
+    border-radius: 4px;
 }
 
 .randAbv {
-    margin: 10px auto 5px auto;
+    margin: 10px auto 0px auto;
 }
 
 /* laptops */

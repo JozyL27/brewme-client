@@ -19,6 +19,7 @@ Array [
       im a beer
     </p>
     <button
+      className="addBeerButton"
       onClick={[Function]}
     >
       Add to My Beers
@@ -41,6 +42,7 @@ Array [
       im a beer too
     </p>
     <button
+      className="addBeerButton"
       onClick={[Function]}
     >
       Add to My Beers

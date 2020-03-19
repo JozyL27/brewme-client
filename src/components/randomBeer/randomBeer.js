@@ -50,10 +50,11 @@ render() {
             {this.context.beers.rows && 
             <div key={randBeer[0].id} className="randDiv">{randBeer[0].name}
             {SearchBeerService.checkForDescript(randBeer[0].descript)}
-            <div className="randAbv">ABV: {randBeer[0].abv}</div>
+            <div className="randAbv">ABV: {Math.round(randBeer[0].abv)}</div>
             <button 
             onClick={() => 
-            this.addToMyBeers(this.context.user_id, randBeer[0].id)}>
+            this.addToMyBeers(this.context.user_id, randBeer[0].id)}
+            className="addBeerButton">
             Add to My Beers</button>
             </div>}
         </section>

@@ -8,7 +8,7 @@ exports[`NavBar component should render the UI as expected 1`] = `
     className="navLink"
   >
     <a
-      className="navBarLink"
+      className="navBarLink active"
       href="/"
       onClick={[Function]}
     >

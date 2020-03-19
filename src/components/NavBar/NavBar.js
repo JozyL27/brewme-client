@@ -10,7 +10,7 @@ export default class NavBar extends React.Component {
                 <li className='navLink'>
                     <Link
                     to='/'
-                    className="navBarLink">
+                    className="navBarLink active">
                     Home
                     </Link>
                 </li>

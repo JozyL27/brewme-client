@@ -6,7 +6,7 @@
 }
 
 .searchLi {
-    width: 70%;
+    width: 90%;
     text-align: center;
     margin-top: 15px;
     margin-right: 35px;
@@ -22,12 +22,35 @@
     background-size:5px 100%;
     background-position:0 0, 100% 0;
     background-repeat:no-repeat;
+    border-radius: 4px;
 }
 
 .searchAbv {
     margin: 10px auto 5px auto;
 }
 
+.addBeerButton {
+    position: relative;
+    right: 5px;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    margin: 40px auto 25px auto;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #E1C340; 
+    border: 2px solid white;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.addBeerButton:hover {
+    background-color: #77dd77;
+    color: white;
+}
 
 /* laptops */
 @media screen and (min-width: 1024px) {
