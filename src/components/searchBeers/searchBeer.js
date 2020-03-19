@@ -60,7 +60,7 @@ export default class SearchBeer extends React.Component {
             {this.context.error && 
             <div className="error">{this.context.error.error}</div>}
             
-            <ul className="searchUl">
+            <ul className="searchUl" aria-live="polite">
             {this.context.beers.length >= 1 &&
             <Beer brewskis={this.context.beers} addBeer={this.addToMyBeers}
             userId={this.context.user_id} hasAuth={this.context.hasAuth}

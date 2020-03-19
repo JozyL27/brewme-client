@@ -48,7 +48,8 @@ render() {
             {this.context.error && 
             <div>{this.context.error.error}</div>}
             {this.context.beers.rows && 
-            <div key={randBeer[0].id} className="randDiv">{randBeer[0].name}
+            <div key={randBeer[0].id} className="randDiv" aria-live="polite"
+            >{randBeer[0].name}
             {SearchBeerService.checkForDescript(randBeer[0].descript)}
             <div className="randAbv">ABV: {Math.round(randBeer[0].abv)}</div>
             <button 

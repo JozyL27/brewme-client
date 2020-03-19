@@ -6,6 +6,7 @@ Array [
     There are currently no beers in your list!
   </p>,
   <ul
+    aria-live="polite"
     className="myUl"
   />,
 ]

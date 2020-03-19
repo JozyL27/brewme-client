@@ -25,6 +25,7 @@ exports[`search beer component renders the UI as expected 1`] = `
     />
   </form>
   <ul
+    aria-live="polite"
     className="searchUl"
   />
 </section>

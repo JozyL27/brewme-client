@@ -30,8 +30,6 @@
   }
 
   .searchButton {
-    position: relative;
-    left: 3px;
     color: white;
     padding: 12px 28px;
     text-decoration: none;
