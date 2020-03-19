@@ -41,7 +41,7 @@
     margin: 40px auto 25px auto;
     transition-duration: 0.4s;
     cursor: pointer;
-    background-color: #E1C340; 
+    background-color: rgb(135,206,250); 
     border: 2px solid white;
     border-radius: 8px;
     font-weight: bold;
@@ -50,6 +50,13 @@
 .addBeerButton:hover {
     background-color: #77dd77;
     color: white;
+}
+
+/* tablets */
+@media screen and (min-width: 768px) {
+    .searchLi {
+        width: 60%;
+    }
 }
 
 /* laptops */

@@ -55,6 +55,13 @@
     color: white;
 }
 
+/* tablets */
+@media screen and (min-width: 768px) {
+    .myLi {
+        width: 60%;
+    }
+}
+
 
 /* laptops */
 @media screen and (min-width: 1024px) {

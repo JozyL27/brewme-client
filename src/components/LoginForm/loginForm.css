@@ -57,7 +57,12 @@ label {
 }
 
 
-
+/* tablets */
+@media screen and (min-width: 768px) {
+    .LoginForm {
+        width: 40%;
+    }
+}
 
 
 /* small laptops */

@@ -53,6 +53,17 @@
     margin: 10px auto 0px auto;
 }
 
+/* tablets */
+@media screen and (min-width: 768px) {
+    .randDiv {
+        width: 60%;
+    }
+
+    .randButton {
+        padding: 10px 18px;
+    }
+}
+
 /* laptops */
 @media screen and (min-width: 1024px) {
     .randDiv {
