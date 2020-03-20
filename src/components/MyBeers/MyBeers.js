@@ -44,10 +44,10 @@ export default class MyBeers extends React.Component {
         return (
             <>
             {this.context.error && 
-            <div>{this.context.error.error}</div>}
+            <div className="myBeersError">{this.context.error.error}</div>}
 
             {this.context.beers.length < 1 &&
-            <p>There are currently no beers in your list!</p>}
+            <p className="noBeersPara">There are currently no beers in your list!</p>}
 
             <ul className="myUl" aria-live="polite">
             {this.context.beers.length >= 1 &&

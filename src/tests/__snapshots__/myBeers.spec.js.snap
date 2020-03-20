@@ -2,7 +2,9 @@
 
 exports[`MyBeers component renders the UI as expected 1`] = `
 Array [
-  <p>
+  <p
+    className="noBeersPara"
+  >
     There are currently no beers in your list!
   </p>,
   <ul
