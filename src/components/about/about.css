@@ -2,11 +2,13 @@
     text-align: center;
     width: 70%;
     margin: 40px auto 0px auto;
+    color: white;
 }
 
 .aboutPara {
     font-weight: bold;
     line-height: 1.5;
+    color: white;
 }
 
 /* tablets */
