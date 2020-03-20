@@ -36,8 +36,8 @@ nav {
 
 .inLink {
     font-weight: bold;
-    color: white;
-    background-color: red;
+    color: black;
+    background-color: yellow;
     transition-duration: 0.4s;
     border: 1px solid black;
     padding: 8px;
@@ -46,8 +46,8 @@ nav {
 }
 
 .inLink:hover {
-    color: black;
-    background-color: yellow;
+    color: white;
+    background-color: red;
 }
 
 .outLink {

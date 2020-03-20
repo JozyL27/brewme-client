@@ -30,7 +30,7 @@ label {
 
 .loginButton {
     cursor: pointer;
-    color: white;
+    color: black;
     padding: 8px 20px;
     text-decoration: none;
     display: block;
@@ -51,9 +51,8 @@ label {
   }
 
 .loginHeader {
-    color: rgb(135,206,250);
+    color: black;
 }
-
 
 /* tablets */
 @media screen and (min-width: 768px) {
