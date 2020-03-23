@@ -15,8 +15,8 @@ const beerContext = React.createContext({
     setAuth: () => {},
 
 })
-export default beerContext
 
+export default beerContext
 
 export class BeerProvider extends React.Component {
     state = {

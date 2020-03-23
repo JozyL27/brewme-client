@@ -10,7 +10,7 @@ import LoginPage from './routes/LoginPage'
 import SearchBeer from './components/searchBeers/searchBeer'
 import RandomBeer from './components/randomBeer/randomBeer'
 import MyBeers from './components/MyBeers/MyBeers'
-import Collage from './components/collage/Collage'
+import Logo from './components/Logo/Logo'
 
 
 class App extends React.Component {
@@ -20,7 +20,7 @@ class App extends React.Component {
         <header className='App_header'>
         <Header />
         </header>
-        <Collage />
+        <Logo />
         <NavBar />
         <main className='App_main'>
           <Switch>
