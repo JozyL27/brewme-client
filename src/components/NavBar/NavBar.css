@@ -1,19 +1,20 @@
-ul {
+.navBar {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 100px;
+    padding: 0;
 }
 
 .navLink {
     list-style: none;
-    margin-right: 15px;
     text-decoration: none;
     text-align: center;
 }
 
 .navBarLink {
-    color: #E1C340;
+    color: black;
+    padding: 10px;
     font-weight: bold;
     transition-duration: 0.4s;
 }
@@ -25,8 +26,16 @@ ul {
 
 /* tablets */
 @media screen and (min-width: 768px) {
+    .navBar {
+        flex-direction: row;
+    }
+
     .navLink {
         font-size: 25px;
+    }
+
+    .navBarLink {
+        padding: 15px;
     }
 
     .navBarLink:hover {
@@ -36,8 +45,12 @@ ul {
 
 /* laptops */
 @media screen and (min-width: 1024px) {
-    .navLink {
-        margin-right: 45px;
+    .navBar {
+        flex-direction: row;
+    }
+
+    .navBarLink {
+        padding: 20px;
     }
 
     .navBarLink:hover {

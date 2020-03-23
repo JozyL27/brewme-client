@@ -1,0 +1,73 @@
+.collageContainer {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 40px auto;
+    align-items: center;
+}
+
+.twoImagesContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.one {
+    margin-right: 10px;
+}
+
+.two {
+    margin-bottom: 10px;
+}
+
+.imgOne {
+    height: 195px;
+}
+
+.imgTwo {
+    height: 80px;
+}
+
+.imgThree {
+    height: 100px;
+}
+
+
+/* tablets */
+@media screen and (min-width: 768px) {
+    .imgOne {
+        height: 195px;
+    }
+    
+    .imgTwo {
+        height: 80px;
+    }
+    
+    .imgThree {
+        height: 100px;
+    }
+}
+
+/* laptops */
+@media screen and (min-width: 1024px) {
+    .imgOne {
+        height: 395px;
+    }
+    
+    .imgTwo {
+        height: 180px;
+    }
+    
+    .imgThree {
+        height: 200px;
+    }
+
+    .logoImg {
+        margin: 10px auto 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logoImgOne {
+        height: 300px;
+    }
+}

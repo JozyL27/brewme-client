@@ -1,20 +1,18 @@
-h1 {
-    margin-top: 70px;
+/* h1 {
+    margin-top: 200px;
     font-size: 45px;
     text-align: center;
     text-decoration: none;
     transition-duration: 0.4s;
-    /* image */
-    /* background-image: url("./images/kissclipart-transparent-background-beer-mug-clipart-beer-glass-f4f301b30dcce288.png");
-    background-repeat: no-repeat;
-    background-position: 5% 0%;
-    background-size: 35px;
-    width: 70%; */
 }
 
 h1:hover {
     color: rgb(135,206,250);
     text-shadow: 1px 1px 2px black, 0 0 25px rgb(135,206,250), 0 0 5px rgb(135,206,250);
+}
+
+.brewHeader {
+    color: black;
 }
 
 nav {
@@ -30,14 +28,71 @@ nav {
     margin: 0px 25px 0px 0px;
 }
 
+.inLink {
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    transition-duration: 0.4s;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.inLink:hover {
+    color: white;
+    background-color: red;
+}
+
+.outLink {
+    font-weight: bold;
+    background-color: rgb(135,206,250);
+    color: black;
+    padding: 5px;
+    transition-duration: 0.4s;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.outLink:hover {
+    color: black;
+    background-color: #77dd77;
+} */
+
 .brewHeader {
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    margin-left: 50px;
+}
+
+h1:hover {
     color: rgb(135,206,250);
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(135,206,250), 0 0 5px rgb(135,206,250);
+}
+
+.loggedIn, .renderLogin {
+    padding-top: 8px;
 }
 
 .inLink {
     font-weight: bold;
-    color: black;
-    background-color: yellow;
+    color: white;
+    background-color: black;
     transition-duration: 0.4s;
     border: 1px solid black;
     padding: 8px;
@@ -68,6 +123,7 @@ nav {
 }
 
 
+
 /* tablets */
 @media screen and (min-width: 768px) {
     .brewHeader {
@@ -83,7 +139,7 @@ nav {
 /* laptops */
 @media screen and (min-width: 1024px) {
     .brewHeader {
-        font-size: 80px;
+        font-size: 30px;
     }
 
     .loggedIn, .renderLogin {
