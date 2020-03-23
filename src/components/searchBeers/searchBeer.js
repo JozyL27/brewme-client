@@ -53,7 +53,8 @@ export default class SearchBeer extends React.Component {
             <section className="searchSection">
             <h3 className="searchHeader">Search Beer Database</h3>
             <form className="searchDatabase" onSubmit={this.getByName} >
-            <input type="text" className="search" name="search" placeholder="Beer Database" />
+            <input type="text" className="search" name="search" 
+            placeholder="Beer Database" />
             <input type="submit" className="searchButton" />
             </form>
 

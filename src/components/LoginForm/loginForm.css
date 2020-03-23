@@ -7,8 +7,8 @@
     border-radius: 4px;
     width: 80%;
     padding: 15px;
-    margin: 50px auto 0px auto;
-    background-color: lightgoldenrodyellow;
+    margin: 50px auto 90px auto;
+    background-color: black;
 }
 
 .user_name {
@@ -16,12 +16,14 @@
     font-weight: bold;
     position: relative;
     right: 5px;
+    color: white;
 }
 
 .password {
     padding: 5px;
     margin-bottom: 5px;
     font-weight: bold;
+    color: white;
 }
 
 label {
@@ -40,7 +42,7 @@ label {
     transition-duration: 0.4s;
     cursor: pointer;
     background-color: rgb(135,206,250); 
-    border: 2px solid lightgoldenrodyellow;
+    border: 2px solid black;
     border-radius: 8px;
     font-weight: bold;
 }
@@ -51,7 +53,13 @@ label {
   }
 
 .loginHeader {
-    color: black;
+    color: white;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+    text-align: center;
 }
 
 /* tablets */
