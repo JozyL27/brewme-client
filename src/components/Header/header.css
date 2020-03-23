@@ -73,20 +73,16 @@ nav {
 }
 
 h1 {
-    font-size: 45px;
+    font-size: 20px;
     text-align: center;
     text-decoration: none;
     transition-duration: 0.4s;
-    margin-left: 50px;
+    padding: 10px;
 }
 
 h1:hover {
     color: rgb(135,206,250);
     text-shadow: 1px 1px 2px black, 0 0 25px rgb(135,206,250), 0 0 5px rgb(135,206,250);
-}
-
-.loggedIn, .renderLogin {
-    padding-top: 8px;
 }
 
 .inLink {
@@ -97,7 +93,7 @@ h1:hover {
     border: 1px solid black;
     padding: 8px;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .inLink:hover {
@@ -109,12 +105,11 @@ h1:hover {
     font-weight: bold;
     background-color: rgb(135,206,250);
     color: black;
-    padding: 5px;
     transition-duration: 0.4s;
     border: 1px solid black;
     padding: 8px;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .outLink:hover {
@@ -122,7 +117,9 @@ h1:hover {
     background-color: #77dd77;
 }
 
-
+.loggedIn, .renderLogin {
+    padding: 10px;
+}
 
 /* tablets */
 @media screen and (min-width: 768px) {
@@ -131,7 +128,7 @@ h1:hover {
     }
 
     .loggedIn, .renderLogin {
-        margin: 0px 30px 0px 0px;
+        /* margin: 0px 30px 0px 0px; */
         font-size: 14px;
     }
 }
@@ -143,7 +140,7 @@ h1:hover {
     }
 
     .loggedIn, .renderLogin {
-        margin: 0px 60px 0px 0px;
+        /* margin: 0px 60px 0px 0px; */
         font-size: 14px;
     }
 }
