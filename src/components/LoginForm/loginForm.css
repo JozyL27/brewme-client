@@ -23,8 +23,8 @@
     color: black;
 }
 
-label {
-    /* padding: 2px; */
+.pwLabel {
+    padding-right: 12px;
 }
 
 .loginButton {
