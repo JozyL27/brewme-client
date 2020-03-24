@@ -3,12 +3,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border:5px solid rgb(135,206,250);
+    border:5px solid black;
     border-radius: 4px;
     width: 80%;
     padding: 15px;
     margin: 50px auto 90px auto;
-    background-color: black;
+    background-color: rgb(135,206,250);
 }
 
 .user_name {
@@ -16,14 +16,14 @@
     font-weight: bold;
     position: relative;
     right: 5px;
-    color: white;
+    color: black;
 }
 
 .password {
     padding: 5px;
     margin-bottom: 5px;
     font-weight: bold;
-    color: white;
+    color: black;
 }
 
 label {
@@ -32,7 +32,7 @@ label {
 
 .loginButton {
     cursor: pointer;
-    color: black;
+    color: white;
     padding: 8px 20px;
     text-decoration: none;
     display: block;
@@ -41,7 +41,7 @@ label {
     margin: 10px auto 5px auto;
     transition-duration: 0.4s;
     cursor: pointer;
-    background-color: rgb(135,206,250); 
+    background-color: black;
     border: 2px solid black;
     border-radius: 8px;
     font-weight: bold;
@@ -49,11 +49,11 @@ label {
 
 .loginButton:hover {
     background-color: #77dd77;
-    color: white;
+    color: black;
   }
 
 .loginHeader {
-    color: white;
+    color: black;
 }
 
 .red {
@@ -61,6 +61,17 @@ label {
     font-weight: bold;
     text-align: center;
 }
+
+.loginInput {
+    background-color: rgb(135,206,250);
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 4px solid black;
+    font-weight: bold;
+    font-size: 14px;
+  }
 
 /* tablets */
 @media screen and (min-width: 768px) {

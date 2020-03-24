@@ -45,8 +45,8 @@ h1:hover {
 
 .outLink {
     font-weight: bold;
-    background-color: rgb(135,206,250);
-    color: black;
+    background-color: black;
+    color: white;
     transition-duration: 0.4s;
     border: 1px solid black;
     padding: 8px;
