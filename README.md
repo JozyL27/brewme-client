@@ -30,21 +30,27 @@ I receive appropriate feedback when I cannot add a beer to the beer database
 Back-end:
 
 Database: Postgres
+
 Database language: SQL
+
 Server: Node.js
+
 server framework: Express.js
+
 Query Builder: Knex.js
+
 testing: Mocha, Chai
 
 Front-end:
 
 Framework: React.js
+
 HTML5, CSS3
+
 testing: Jest
 
 deployment:
 
 Heroku & Zeit
-
 
 # Site:  https://brewme-client.now.sh/
