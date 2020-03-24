@@ -27,7 +27,7 @@ I can use the "Random Beer" feature to retrieve a random beer from the beer data
 I receive appropriate feedback when I cannot add a beer to the beer database
 
 # Tech used
-Back-end:
+# Back-end:
 
 Database: Postgres
 
@@ -41,7 +41,7 @@ Query Builder: Knex.js
 
 testing: Mocha, Chai
 
-Front-end:
+# Front-end:
 
 Framework: React.js
 
