@@ -12,19 +12,15 @@
 }
 
 .user_name {
-    padding: 20px;
+    padding: 8px;
     font-weight: bold;
     color: black;
 }
 
 .password {
-    padding: 20px;
+    padding: 8px;
     font-weight: bold;
     color: black;
-}
-
-.pwLabel {
-    padding-right: 12px;
 }
 
 .loginButton {
@@ -60,14 +56,14 @@
 }
 
 .loginInput {
+    width: 100%;
     background-color: rgb(135,206,250);
     padding: 12px 20px;
-    margin: 8px auto;
-    box-sizing: border-box;
+    /* margin: 8px auto; */
     border: none;
     border-bottom: 4px solid black;
     font-weight: bold;
-    font-size: 14px;
+    /* font-size: 14px; */
   }
 
 /* tablets */

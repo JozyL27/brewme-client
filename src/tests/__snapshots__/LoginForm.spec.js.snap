@@ -32,12 +32,13 @@ exports[`LoginForm component renders the UI as expected 1`] = `
     className="password"
   >
     <label
+      className="pwLabel"
       htmlFor="password"
     >
       Password
     </label>
     <input
-      className="Input loginInput"
+      className="Input loginInput pwInput"
       id="password"
       name="password"
       required={true}
