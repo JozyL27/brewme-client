@@ -49,7 +49,7 @@ HTML5, CSS3
 
 testing: Jest
 
-deployment:
+# deployment:
 
 Heroku & Zeit
 
