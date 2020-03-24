@@ -12,15 +12,14 @@
     color: black;
 }
 
-.demoPara {
+.loginInfo {
     margin-top: 10px;
     font-weight: bold;
     line-height: 1.5;
-    color: black;
 }
 
-.demoInfo {
-    color: red;
+.loginInfo {
+    color: blue;
 }
 
 /* tablets */

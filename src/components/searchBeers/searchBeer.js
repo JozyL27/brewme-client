@@ -14,6 +14,8 @@ export default class SearchBeer extends React.Component {
     componentDidMount() {
         this.context.clearError()
 
+        // if user has an auth token, parse it and 
+        // add username and password to state
         if(TokenService.hasAuthToken()) {
         let user = TokenService.getAuthToken()
         let parsedUser = TokenService.parseAuthToken(user)
@@ -24,6 +26,10 @@ export default class SearchBeer extends React.Component {
     getByName = event => {
         event.preventDefault()
         this.context.clearError()
+        
+        // retrieve search value and uppercase the first letter
+        // of each user input word, then encode uri component
+        //removes any spaces or invalid inputs
         let beerName = event.target.search.value
         beerName = beerName.toLowerCase()
             .split(' ')

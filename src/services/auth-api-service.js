@@ -16,6 +16,8 @@ const AuthApiService = {
             : res.json()
             )
     },
+    // endpoint below will be used for registration component
+    // in a future update
     postUser(user) {
         return fetch(`${config.API_ENDPOINT}/users`, {
             method: 'POST',

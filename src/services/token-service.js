@@ -16,6 +16,8 @@ const TokenService = {
     makeBasicAuthToken(userName, password) {
         return window.btoa(`${userName}:${password}`)
     },
+    // code below parses jwt and returns a js object that
+    // can be used
     parseAuthToken(token) {
     const base64Url = token.split('.')[1];
     const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');

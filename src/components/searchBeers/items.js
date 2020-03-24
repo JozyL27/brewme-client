@@ -3,8 +3,6 @@ import SearchBeerService from '../../services/search-beer-service'
 import './items.css'
 
 export default function Beer(props) {
- 
-
     return (
         <>
             {props.brewskis.map((beer, index) =>
