@@ -14,8 +14,6 @@
 .user_name {
     padding: 5px;
     font-weight: bold;
-    position: relative;
-    right: 5px;
     color: black;
 }
 
@@ -65,7 +63,7 @@ label {
 .loginInput {
     background-color: rgb(135,206,250);
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 8px auto;
     box-sizing: border-box;
     border: none;
     border-bottom: 4px solid black;
