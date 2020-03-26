@@ -9,6 +9,7 @@ export default class MyBeers extends React.Component {
 
     componentDidMount() {
         this.context.clearError()
+        this.context.setLoading()
 
         if(TokenService.hasAuthToken()) {
         let user = TokenService.getAuthToken()
@@ -16,7 +17,10 @@ export default class MyBeers extends React.Component {
         this.context.setUser(parsedUser)
 
         SearchBeerService.getMyBeers(parsedUser.id)
-        .then(this.context.setBeers)
+        .then(beers => {
+            this.context.clearLoading()
+            this.context.setBeers(beers)
+        })
         .catch(this.context.setError)
         }
     }
@@ -38,22 +42,28 @@ export default class MyBeers extends React.Component {
     componentWillUnmount() {
         this.context.clearBeers()
         this.context.clearError()
+        this.context.clearLoading()
     }
 
     render() {
         return (
             <>
+
             {this.context.error && 
             <div className="myBeersError">{this.context.error.error}</div>}
 
-            {this.context.beers.length < 1 &&
-            <p className="noBeersPara">There are currently no beers in your list!</p>}
+            {this.context.beers.length < 1 && this.context.isLoading === null ?
+            <p className="noBeersPara">There are currently no beers in your list!</p>
+            : null}
 
+            {this.context.isLoading ? <div className="loader"></div> :
             <ul className="myUl" aria-live="polite">
             {this.context.beers.length >= 1 &&
             <MyItems brewskis={this.context.beers} 
             deleteBrewski={this.deleteUserBeer}/>}
             </ul>
+            }
+            
             </>
         )
     }
