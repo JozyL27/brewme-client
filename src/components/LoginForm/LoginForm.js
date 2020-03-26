@@ -14,9 +14,14 @@ export default class LoginForm extends React.Component {
 
     state = { error: null }
 
+    componentDidMount() {
+        this.context.clearLoading()
+    }
+
     handleSubmitJwtAuth = event => {
         event.preventDefault()
         this.setState({ error: null })
+        this.context.setLoading()
         const { user_name, password } = event.target
 
         AuthApiService.postLogin({
@@ -35,9 +40,17 @@ export default class LoginForm extends React.Component {
         })
     }
 
+    componentWillUnmount() {
+        this.context.clearLoading()
+    }
+
     render() {
         const { error } = this.state
         return (
+            <>
+            {this.context.isLoading && 
+            this.state.error === null ? 
+            <div className="loader"></div> : 
             <form className='LoginForm' onSubmit={this.handleSubmitJwtAuth}>
                 <h2 className="loginHeader">LOGIN</h2>
                 <div role='alert'>
@@ -52,6 +65,7 @@ export default class LoginForm extends React.Component {
                     name='user_name'
                     className="loginInput"
                     id='user_name'
+                    defaultValue="Zelda"
                     >
                     </Input>
                 </div>
@@ -63,6 +77,7 @@ export default class LoginForm extends React.Component {
                     required
                     name='password'
                     type='password'
+                    defaultValue="#Link1234"
                     className="loginInput pwInput"
                     id='password'>
                     </Input>
@@ -71,6 +86,8 @@ export default class LoginForm extends React.Component {
                     Login
                 </Button>
             </form>
+            }
+            </>
         )
     }
 }

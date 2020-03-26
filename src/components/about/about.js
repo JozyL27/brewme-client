@@ -21,8 +21,8 @@ export default class About extends React.Component {
         {' '}
         {TokenService.hasAuthToken() ? null
         : <span className="loginInfo">
-        Demo account info: username: Zelda,
-        password: #Link1234.
+        Demo account information will be 
+        provided at login.
         </span>}
         </p>
         </section>

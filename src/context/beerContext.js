@@ -7,12 +7,15 @@ const beerContext = React.createContext({
     user_id: null,
     username: null,
     hasAuth: null,
+    isLoading: null,
     setError: () => {},
     clearError: () => {},
     setBeers: () => {},
     setUser: () => {},
     clearBeers: () => {},
     setAuth: () => {},
+    setLoading: () => {},
+    clearLoading: () => {},
 
 })
 
@@ -25,6 +28,7 @@ export class BeerProvider extends React.Component {
         user_id: null,
         username: null,
         hasAuth: TokenService.hasAuthToken(),
+        isLoading: null,
     }
 
     setUser = user => {
@@ -51,12 +55,21 @@ export class BeerProvider extends React.Component {
         this.setState({ hasAuth: TokenService.hasAuthToken })
     }
 
+    setLoading = () => {
+        this.setState({ isLoading: true })
+    }
+
+    clearLoading = () => {
+        this.setState({ isLoading: null })
+    }
+
     render() {
         const value = {
             beers: this.state.beers,
             error: this.state.error,
             user_id: this.state.user_id,
             username: this.state.username,
+            isLoading: this.state.isLoading,
             setError: this.setError,
             clearError: this.clearError,
             setBeers: this.setBeers,
@@ -64,6 +77,8 @@ export class BeerProvider extends React.Component {
             clearBeers: this.clearBeers,
             hasAuth: this.state.hasAuth,
             setAuth: this.setAuth,
+            setLoading: this.setLoading,
+            clearLoading: this.clearLoading,
         }
 
         return (

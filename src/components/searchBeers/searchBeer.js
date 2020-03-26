@@ -13,6 +13,7 @@ export default class SearchBeer extends React.Component {
 
     componentDidMount() {
         this.context.clearError()
+        this.context.setLoading()
 
         // if user has an auth token, parse it and 
         // add username and password to state
