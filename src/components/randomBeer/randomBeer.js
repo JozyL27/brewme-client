@@ -9,6 +9,7 @@ static contextType = BeerContext
 
 componentDidMount() {
     this.context.clearError()
+    this.context.clearLoading()
 
     if(TokenService.hasAuthToken()) {
     let user = TokenService.getAuthToken()
@@ -20,9 +21,13 @@ componentDidMount() {
 getRandom = event => {
     event.preventDefault()
     this.context.clearError()
+    this.context.setLoading()
 
     SearchBeerService.getRandomBeer()
-    .then(this.context.setBeers)
+    .then(beers => {
+        this.context.clearLoading()
+        this.context.setBeers(beers)
+    })
     .catch(this.context.setError)
 }
 
@@ -37,6 +42,7 @@ addToMyBeers = (user, beer) => {
 componentWillUnmount() {
     this.context.clearBeers()
     this.context.clearError()
+    this.context.clearLoading()
 }
 
 
@@ -44,7 +50,8 @@ render() {
     let randBeer = this.context.beers.rows
     return (
         <section className="random">
-            <button onClick={this.getRandom} className="randButton">Get Random Beer!</button>
+            {this.context.isLoading ? <div className="loader"></div> : 
+            <button onClick={this.getRandom} className="randButton">Get Random Beer!</button> }
             {this.context.error && 
             <div>{this.context.error.error}</div>}
             {this.context.beers.rows && 
