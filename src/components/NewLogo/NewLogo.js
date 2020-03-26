@@ -1,11 +1,11 @@
 import React from 'react'
-import './Footer.css'
+import './NewLogo.css'
 
 
 export default class Footer extends React.Component {
     render () {
         return (
-            <footer className="footer">
+            <div className="newLogo">
                 <div className="scene">
                     <div className="box is-spinning">
                         <div className="box__face box__face--front">"BREWME"</div>
@@ -16,7 +16,7 @@ export default class Footer extends React.Component {
                         <div className="box__face box__face--bottom">03 - 2020</div>
                     </div>
                 </div>
-            </footer>
+            </div>
         )
     }
 }
