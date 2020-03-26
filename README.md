@@ -3,11 +3,7 @@
 # Summary
 - As a user:
 
-    - I can add beers to "My Beers". Beers contain:
-
-    ABV info
-    the name of the beer
-    a description of the beer
+    - I can add beers to "My Beers". Beers contain: ABV info, the name of the beer, & a description of the beer.
 
     - I can see a list of my beers when I click on the "My Beers" feature
     ![Alt text](./README-images/Screen%20Shot%202020-03-24%20at%203.30.33%20PM.png?raw=true "My beers feature")
