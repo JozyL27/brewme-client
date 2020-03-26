@@ -13,7 +13,7 @@ export default class SearchBeer extends React.Component {
 
     componentDidMount() {
         this.context.clearError()
-        this.context.setLoading()
+        this.context.clearLoading()
 
         // if user has an auth token, parse it and 
         // add username and password to state
@@ -27,6 +27,7 @@ export default class SearchBeer extends React.Component {
     getByName = event => {
         event.preventDefault()
         this.context.clearError()
+        this.context.setLoading()
         
         // retrieve search value and uppercase the first letter
         // of each user input word, then encode uri component
@@ -39,7 +40,10 @@ export default class SearchBeer extends React.Component {
         encodeURIComponent(beerName)
 
         SearchBeerService.getByName(beerName)
-        .then(this.context.setBeers)
+        .then(beers => {
+            this.context.clearLoading()
+            this.context.setBeers(beers)
+        })
         .catch(this.context.setError)
     }
 
@@ -53,6 +57,7 @@ export default class SearchBeer extends React.Component {
     componentWillUnmount() {
         this.context.clearBeers()
         this.context.clearError()
+        this.context.clearLoading()
     }
 
     render() {
@@ -65,15 +70,16 @@ export default class SearchBeer extends React.Component {
             <input type="submit" className="searchButton" />
             </form>
 
-            {this.context.error && 
+            {this.context.error &&
             <div className="error">{this.context.error.error}</div>}
             
+            {this.context.isLoading ? <div className="loader"></div> : 
             <ul className="searchUl" aria-live="polite">
             {this.context.beers.length >= 1 &&
             <Beer brewskis={this.context.beers} addBeer={this.addToMyBeers}
             userId={this.context.user_id} hasAuth={this.context.hasAuth}
             beerError={this.context.error} />}
-            </ul>
+            </ul> }
             </section>
         )
     }
