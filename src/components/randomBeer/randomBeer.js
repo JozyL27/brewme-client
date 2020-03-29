@@ -54,13 +54,12 @@ render() {
             {this.context.isLoading ? <div className="loader"></div> : 
             <button onClick={this.getRandom} className="randButton">Get Random Beer!</button> }
             {this.context.error && 
-            <div>{this.context.error.error}</div>}
+            <div className="error">{this.context.error.error}</div>}
             {this.context.beers.rows && 
             <div key={randBeer[0].id} className="randDiv" aria-live="polite"
             >{randBeer[0].name}
             {SearchBeerService.checkForDescript(randBeer[0].descript)}
             <div className="randAbv">ABV: {Math.round(randBeer[0].abv)}</div>
-
             {randBeer[0].touched === true ? 
             <p className="beerAdded">Added To My Beers!</p> :
             <button 
