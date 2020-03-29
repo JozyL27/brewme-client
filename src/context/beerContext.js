@@ -75,7 +75,6 @@ export class BeerProvider extends React.Component {
     }
 
     render() {
-        console.log(this.state.beers)
         const value = {
             beers: this.state.beers,
             error: this.state.error,
