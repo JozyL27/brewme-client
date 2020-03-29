@@ -75,7 +75,7 @@ export default class SearchBeer extends React.Component {
             {this.context.error &&
             <div className="error">{this.context.error.error}</div>}
             
-            {this.context.isLoading ? <div className="loader"></div> : 
+            {this.context.isLoading && this.context.error === null ? <div className="loader"></div> : 
             <ul className="searchUl" aria-live="polite">
             {this.context.beers.length >= 1 &&
             <Beer brewskis={this.context.beers} addBeer={this.addToMyBeers}
