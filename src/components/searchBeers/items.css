@@ -56,6 +56,13 @@
     color: white;
 }
 
+.beerAdded {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
 /* tablets */
 @media screen and (min-width: 768px) {
     .searchLi {

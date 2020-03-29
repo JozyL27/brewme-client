@@ -16,6 +16,8 @@ const beerContext = React.createContext({
     setAuth: () => {},
     setLoading: () => {},
     clearLoading: () => {},
+    addTouchedKeyToBeers: () => {},
+    findBeerByIdAndToggleTouched: () => {},
 
 })
 
@@ -63,7 +65,17 @@ export class BeerProvider extends React.Component {
         this.setState({ isLoading: null })
     }
 
+    addTouchedKeyToBeers = (arr) => {
+        arr.map(item => item.touched = false)
+    }
+
+    findBeerByIdAndToggleTouched = (id) => {
+        const touchedBeer = this.state.beers.find(brew => brew.id === id)
+        touchedBeer.touched = true
+    }
+
     render() {
+        console.log(this.state.beers)
         const value = {
             beers: this.state.beers,
             error: this.state.error,
@@ -79,6 +91,8 @@ export class BeerProvider extends React.Component {
             setAuth: this.setAuth,
             setLoading: this.setLoading,
             clearLoading: this.clearLoading,
+            addTouchedKeyToBeers: this.addTouchedKeyToBeers,
+            findBeerByIdAndToggleTouched: this.findBeerByIdAndToggleTouched,
         }
 
         return (

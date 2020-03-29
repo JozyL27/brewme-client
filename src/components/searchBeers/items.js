@@ -9,8 +9,10 @@ export default function Beer(props) {
             <li key={index} className="searchLi"> {beer.name}
             <div className="searchAbv">ABV: {Math.round(beer.abv)}</div>
             {SearchBeerService.checkForDescript(beer.descript)}
+
+            {beer.touched === true ? <p className="beerAdded">Added To My Beers!</p> :
             <button onClick={() => props.addBeer(props.userId, beer.id)} 
-            className="addBeerButton">Add to My Beers</button>
+            className="addBeerButton">Add to My Beers</button>}
             </li>)}
         </>
     )

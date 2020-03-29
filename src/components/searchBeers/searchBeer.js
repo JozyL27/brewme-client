@@ -42,6 +42,7 @@ export default class SearchBeer extends React.Component {
         SearchBeerService.getByName(beerName)
         .then(beers => {
             this.context.clearLoading()
+            this.context.addTouchedKeyToBeers(beers)
             this.context.setBeers(beers)
         })
         .catch(this.context.setError)
@@ -49,6 +50,7 @@ export default class SearchBeer extends React.Component {
 
     addToMyBeers = (user, beer) => {
         this.context.clearError()
+        this.context.findBeerByIdAndToggleTouched(beer)
     
         SearchBeerService.addBeer(user, beer)
         .catch(this.context.setError)
@@ -61,6 +63,7 @@ export default class SearchBeer extends React.Component {
     }
 
     render() {
+        console.log(this.context.beers)
         return (
             <section className="searchSection">
             <h3 className="searchHeader">Search Beer Database</h3>
