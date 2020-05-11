@@ -13,7 +13,7 @@
     margin: 15px auto 15px auto;
     padding: 15px;
     /* gradient below */
-    border-top: 5px solid rgb(135,206,250);
+    /* border-top: 5px solid rgb(135,206,250);
     border-bottom: 5px solid #E1C340;
     background-image: 
         linear-gradient(rgb(135,206,250), #E1C340),
@@ -21,7 +21,8 @@
     ;
     background-size:5px 100%;
     background-position:0 0, 100% 0;
-    background-repeat:no-repeat;
+    background-repeat:no-repeat; */
+    box-shadow: .5rem 1rem .8rem #888888;
     border-radius: 4px;
     color: black;
     background-color: white;
