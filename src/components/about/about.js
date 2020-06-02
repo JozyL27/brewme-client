@@ -14,7 +14,7 @@ export default class About extends React.Component {
     return (
         <section className='about'>
         <h2>About | How To</h2>
-        <p className="aboutPara">BrewMe is a database containing almost 5,000 beer entries.
+        <p className="aboutPara">BrewMe is a beer database containing over 4,500 beer entries.
         Developers are able to use this  RESTful API to add and save their favorite beers to their "My Beers"
         list. Developers are also able to search the beer database for beer info and use the
         "Random Beer" feature to retrieve a random beer from the database. This API has authentication 
