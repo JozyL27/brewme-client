@@ -8,9 +8,12 @@ const beerContext = React.createContext({
     username: null,
     hasAuth: null,
     isLoading: null,
+    randBeer: {},
     setError: () => {},
     clearError: () => {},
     setBeers: () => {},
+    setRandBeer: () => {},
+    clearRandBeer: () => {},
     setUser: () => {},
     clearBeers: () => {},
     setAuth: () => {},
@@ -31,6 +34,7 @@ export class BeerProvider extends React.Component {
         username: null,
         hasAuth: TokenService.hasAuthToken(),
         isLoading: null,
+        randBeer: {},
     }
 
     setUser = user => {
@@ -39,6 +43,10 @@ export class BeerProvider extends React.Component {
 
     setBeers = beers => {
         this.setState({ beers })
+    }
+
+    setRandBeer = randBeer => {
+        this.setState({ randBeer })
     }
 
     setError = error => {
@@ -51,6 +59,10 @@ export class BeerProvider extends React.Component {
 
     clearBeers = () => {
         this.setState({ beers: [] })
+    }
+
+    clearRandBeer = () => {
+        this.setState({ randBeer: {} })
     }
 
     setAuth = () => {
@@ -92,6 +104,9 @@ export class BeerProvider extends React.Component {
             clearLoading: this.clearLoading,
             addTouchedKeyToBeers: this.addTouchedKeyToBeers,
             findBeerByIdAndToggleTouched: this.findBeerByIdAndToggleTouched,
+            randBeer: this.state.randBeer,
+            setRandBeer: this.setRandBeer,
+            clearRandBeer: this.clearRandBeer,
         }
 
         return (
