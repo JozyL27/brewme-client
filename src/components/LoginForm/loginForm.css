@@ -3,12 +3,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border:5px solid black;
-    border-radius: 4px;
+    /* border:5px solid black; */
+    border-radius: 8px;
     width: 80%;
     padding: 15px;
     margin: 50px auto 90px auto;
     background-color: rgb(135,206,250);
+    box-shadow: .5rem 1rem 1.8rem #888888;
 }
 
 .user_name {
@@ -64,20 +65,26 @@
     border-bottom: 4px solid black;
     font-weight: bold;
     /* font-size: 14px; */
+    border-radius: 0;
+    -webkit-border-radius:0px;
+  }
+
+  .loginInput:focus {
+    outline: none;
   }
 
   /* loading effect */
   .loader {
     border: 16px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 16px solid blue;
-    border-right: 16px solid green;
-    border-bottom: 16px solid red;
+    border-top: 16px solid lightblue;
+    border-right: 16px solid lightgreen;
+    border-bottom: 16px solid lightcoral;
     border-left: 16px solid gold;
     width: 120px;
     height: 120px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
     margin: 15px auto;
   }
 

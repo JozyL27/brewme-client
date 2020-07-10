@@ -10,17 +10,18 @@ import LoginPage from './routes/LoginPage'
 import SearchBeer from './components/searchBeers/searchBeer'
 import RandomBeer from './components/randomBeer/randomBeer'
 import MyBeers from './components/MyBeers/MyBeers'
-import NewLogo from './components/NewLogo/NewLogo'
+import Logo from './components/Logo/Logo'
 
 
 class App extends React.Component {
+
   render() {
     return (
       <div className='App'>
         <header className='App_header'>
         <Header />
         </header>
-        <NewLogo />
+        <Logo />
         <NavBar />
         <main className='App_main'>
           <Switch>
